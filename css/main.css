@@ -214,6 +214,67 @@ h1{
   -webkit-animation: scroll linear 40s infinite;
 }
 
+.sp #scroll_speed_marker,
+.en #scroll_speed_marker,
+.sp #scroll_speed,
+.en #scroll_speed{
+  opacity: 0;
+}
+
+#scroll_speed_marker{
+  position: fixed;
+  bottom: 4rem;
+  left: 50%;
+  color: #ffffff;
+  text-shadow: 0 0 1px #000;
+  text-transform: uppercase;
+  transform: translateX(-50%);
+  -webkit-transform: translateX(-50%);
+  opacity: 1;
+
+  transition: opacity ease 0.5s;
+  -webkit-transition: opacity ease 0.5s;
+}
+
+#scroll_speed{
+  position: fixed;
+  bottom: 1rem;
+  left: 50%;
+  transform: translateX(-50%);
+  -webkit-transform: translateX(-50%);
+
+  -webkit-appearance: none;  /* Override default CSS styles */
+  appearance: none;
+  width: 10rem; /* Full-width */
+  height: 2rem; /* Specified height */
+  outline: none; /* Remove outline */
+  background-color: rgba(255,255,255,0.5);
+  border: 4px solid #fff;
+  border-radius: 2rem;
+  -webkit-border-radius: 2rem;
+  opacity: 1;
+  transition: opacity ease 0.5s;
+  -webkit-transition: opacity ease 0.5s;
+}
+
+#scroll_speed::-webkit-slider-thumb {
+  -webkit-appearance: none; /* Override default look */
+  appearance: none;
+  width: 2rem; /* Set a specific slider handle width */
+  height: 2rem; /* Slider handle height */
+  background: #fff; /* Green background */
+  cursor: pointer; /* Cursor on hover */
+  border-radius: 50%;
+}
+
+#scroll_speed::-moz-range-thumb {
+  width: 2rem; /* Set a specific slider handle width */
+  height: 2rem; /* Slider handle height */
+  background: #fff; /* Green background */
+  cursor: pointer; /* Cursor on hover */
+  border-radius: 50%;
+}
+
 .image_container img{
   width: 12.5%;
   margin: 1rem;

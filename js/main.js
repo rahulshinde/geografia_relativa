@@ -3,6 +3,7 @@ document.addEventListener("DOMContentLoaded", function(){
   window.addEventListener('mousemove', setMouse);
   window.addEventListener('resize', setWidth);
   width = window.innerWidth;
+  document.getElementById('scroll_speed').addEventListener('input', setScrollSpeed);
 });
 
 function setWidth(){
@@ -24,4 +25,12 @@ function setMouse(event){
     document.body.classList.remove('sp');
     document.body.classList.remove('en');
   }
+}
+
+function setScrollSpeed(event){
+  var value = event.target.value;
+  document.getElementById('time').innerHTML = value;
+  document.querySelectorAll('.image_inner_wrapper').forEach(function(e){
+    e.style.animation = 'scroll linear ' + value + 's infinite';
+  });
 }
