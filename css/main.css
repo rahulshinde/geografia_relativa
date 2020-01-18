@@ -29,7 +29,6 @@ body{
   margin: 2rem auto 4rem auto;
   background-color: #b9d3db;
   /*background-color: #000;*/
-  width: 45rem;
   text-shadow: 0rem 0rem 1px #000;
 }
 
@@ -242,6 +241,10 @@ h1{
   z-index: 1000;
 }
 
+#tablet_mobile_slider{
+  display: none;
+}
+
 @media (max-width: 1440px){
 html{
   font-size: 28px;
@@ -256,15 +259,30 @@ html{
 
 @media (max-width: 1100px){
   html{
-    font-size: 20px;
+    font-size: 28px;
   }
 
   .image_container img{
-    width: 29%;
+    width: calc(33.333% - 2rem);
+  }
+
+  .third{
+    margin-top: 3rem;
+    width: 50%;
   }
 
   .page_heading{
-    display: none;
+    font-size: 2rem;
+    top: 4rem;
+  }
+
+  #english_heading{
+    right: 1rem;
+    transform: translateY(0%) rotate(0deg);
+  }
+  #spanish_heading{
+    left: 1rem;
+    transform: translateY(0%) rotate(0deg);
   }
 
   #english, #english .about{
@@ -277,21 +295,68 @@ html{
 
   .en #english{
     opacity: 1;
-    transform: translateX(25%) rotateY(0deg) scale(1);
+    transform: translateX(calc(0% - 1rem)) rotateY(0deg) scale(1);
   }
 
   .en #spanish{
     opacity: 0;
-    transform: translateX(25%) rotateY(0deg) scale(1);
+    transform: translateX(calc(0% - 1rem)) rotateY(0deg) scale(1);
   }
 
   .sp #spanish{
     opacity: 1;
-    transform: translateX(-125%) rotateY(0deg) scale(1);
+    transform: translateX(calc(-100% + 1rem)) rotateY(0deg) scale(1);
   }
 
   .sp #english{
     opacity: 0;
-    transform: translateX(-125%) rotateY(-0deg) scale(1);
+    transform: translateX(calc(-100% + 1rem)) rotateY(-0deg) scale(1);
+  }
+
+  #tablet_mobile_slider{
+    display: block;
+    position: fixed;
+    top: 1rem;
+    left: 50%;
+    transform: translateX(-50%);
+    width: calc(100% - 2rem);
+    z-index: 100;
+  }
+
+  #image_marker{
+    position: fixed;
+    left: 50%;
+    transform: translateX(-50%);
+    margin-top: 0.6rem;
+    height: 2rem;
+  }
+
+  #slider {
+    -webkit-appearance: none;  /* Override default CSS styles */
+    appearance: none;
+    width: 100%; /* Full-width */
+    height: 2rem; /* Specified height */
+    background: rgba(255,255,255,0.7);
+    backdrop-filter: blur(5px); 
+    border: 0.1rem solid #fff;
+    outline: none;
+    border-radius: 4rem
+  }
+
+  #slider::-webkit-slider-thumb {
+    -webkit-appearance: none;
+    appearance: none;
+    width: 2rem;
+    height: 2rem;
+    border-radius: 50%;
+    background: #fff;
+    cursor: pointer;
+  }
+
+  #slider::-moz-range-thumb {
+    width: 2rem; /* Set a specific slider handle width */
+    height: 2rem; /* Slider handle height */
+    background: #fff;
+    cursor: pointer; /* Cursor on hover */
   }
 }
