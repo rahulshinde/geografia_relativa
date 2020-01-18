@@ -26,7 +26,7 @@ html{
 
 body{
   font-family: 'TimesNewRomanRounded', serif;
-  margin: 4rem auto;
+  margin: 2rem auto 4rem auto;
   background-color: #b9d3db;
   /*background-color: #000;*/
   width: 45rem;
@@ -44,6 +44,7 @@ h1{
   margin-bottom: 2rem;
   filter: blur(1px);
   width: 20rem;
+  max-width: 100%;
 }
 
 .vcu.logo{
@@ -254,13 +255,43 @@ html{
 }
 
 @media (max-width: 1100px){
-html{
-  font-size: 20px;
-}
-}
+  html{
+    font-size: 20px;
+  }
 
-@media (max-width: 1000px){
-html{
-  font-size: 18px;
-}
+  .image_container img{
+    width: 29%;
+  }
+
+  .page_heading{
+    display: none;
+  }
+
+  #english, #english .about{
+    text-align: right;
+  }
+
+  #spanish, #spanish .about{
+    text-align: left;
+  }
+
+  .en #english{
+    opacity: 1;
+    transform: translateX(25%) rotateY(0deg) scale(1);
+  }
+
+  .en #spanish{
+    opacity: 0;
+    transform: translateX(25%) rotateY(0deg) scale(1);
+  }
+
+  .sp #spanish{
+    opacity: 1;
+    transform: translateX(-125%) rotateY(0deg) scale(1);
+  }
+
+  .sp #english{
+    opacity: 0;
+    transform: translateX(-125%) rotateY(-0deg) scale(1);
+  }
 }
