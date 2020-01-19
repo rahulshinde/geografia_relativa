@@ -228,7 +228,7 @@ h1{
   z-index: 1000;
 }
 
-#tablet_mobile_slider{
+#image_marker{
   display: none;
 }
 
@@ -282,6 +282,7 @@ html{
   #image_marker{
     height: 3.2rem;
     top: 0.5rem;
+    display: block;
   }
 
   #english_heading{

@@ -77,7 +77,7 @@ function setMouse(event){
   } else if (event.clientX >= (width/3) && event.clientX >= (width * (2/3))){
     englishVisible();
   } else{
-    imagesLoaded();
+    imagesVisible();
   }
 }
 
