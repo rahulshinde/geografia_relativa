@@ -22,7 +22,7 @@ document.addEventListener("DOMContentLoaded", function(){
   window.addEventListener('resize', resizeHandler);
   width = window.innerWidth;
   height = window.innerHeight;
-  document.getElementById('scroll_speed').addEventListener('input', setScrollSpeed);
+  document.getElementById('slider').addEventListener('input', setSlider);
 });
 
 function animateImages(){
@@ -62,6 +62,9 @@ function resizeHandler(){
 }
 
 function setMouse(event){
+  if (width <= 1100){
+    return;
+  }
   var x = event.clientX;
   if (event.clientX < (width/3)){
     document.body.classList.remove('between');
@@ -78,9 +81,20 @@ function setMouse(event){
   }
 }
 
-function setScrollSpeed(event){
+function setSlider(event){
   var value = event.target.value;
-  document.getElementById('time').innerHTML = value;
-  interval = value;
-  diff = total_height/interval;
+  console.log(value);
+  if (value == 1){
+    document.body.classList.remove('between');
+    document.body.classList.remove('en');
+    document.body.classList.add('sp');
+  } else if (value == 3){
+    document.body.classList.remove('between');
+    document.body.classList.remove('sp');
+    document.body.classList.add('en');
+  } else{
+    document.body.classList.add('between');
+    document.body.classList.remove('sp');
+    document.body.classList.remove('en');
+  }
 }
