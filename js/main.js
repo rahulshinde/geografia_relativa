@@ -20,6 +20,12 @@ var width,
 document.addEventListener("DOMContentLoaded", function(){
   window.addEventListener('mousemove', setMouse);
   window.addEventListener('resize', resizeHandler);
+  
+  document.getElementById('image_marker').addEventListener('click', imagesVisible);
+  document.getElementById('english_heading').addEventListener('click', englishVisible);
+  document.getElementById('spanish_heading').addEventListener('click', spanishVisible);
+
+
   width = window.innerWidth;
   height = window.innerHeight;
   document.getElementById('slider').addEventListener('input', setSlider);
@@ -67,34 +73,40 @@ function setMouse(event){
   }
   var x = event.clientX;
   if (event.clientX < (width/3)){
-    document.body.classList.remove('between');
-    document.body.classList.remove('en');
-    document.body.classList.add('sp');
+    spanishVisible();
   } else if (event.clientX >= (width/3) && event.clientX >= (width * (2/3))){
-    document.body.classList.remove('between');
-    document.body.classList.remove('sp');
-    document.body.classList.add('en');
+    englishVisible();
   } else{
-    document.body.classList.add('between');
-    document.body.classList.remove('sp');
-    document.body.classList.remove('en');
+    imagesLoaded();
   }
+}
+
+function englishVisible(){
+  document.body.classList.remove('between');
+  document.body.classList.remove('sp');
+  document.body.classList.add('en');
+}
+
+function imagesVisible(){
+  document.body.classList.add('between');
+  document.body.classList.remove('sp');
+  document.body.classList.remove('en');
+}
+
+function spanishVisible(){
+  document.body.classList.remove('between');
+  document.body.classList.remove('en');
+  document.body.classList.add('sp');
 }
 
 function setSlider(event){
   var value = event.target.value;
   console.log(value);
   if (value == 1){
-    document.body.classList.remove('between');
-    document.body.classList.remove('en');
-    document.body.classList.add('sp');
+    spanishVisible();
   } else if (value == 3){
-    document.body.classList.remove('between');
-    document.body.classList.remove('sp');
-    document.body.classList.add('en');
+    englishVisible()
   } else{
-    document.body.classList.add('between');
-    document.body.classList.remove('sp');
-    document.body.classList.remove('en');
+    imagesVisible();
   }
 }

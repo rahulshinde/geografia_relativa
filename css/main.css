@@ -249,6 +249,10 @@ html{
     font-size: 28px;
   }
 
+  body{
+    margin-top: 0;
+  }
+
   .image_container img{
     width: calc(33.333% - 2rem);
   }
@@ -261,6 +265,23 @@ html{
   .page_heading{
     font-size: 2rem;
     top: 4rem;
+  }
+
+  .button{
+    z-index: 1000;
+    top: 1rem;
+    border: 0.1rem solid #fff;
+    background-color: rgba(255,255,255,0.5);
+    backdrop-filter: blur(0.1rem);
+    -webkit-backdrop-filter: blur(0.1rem);
+    padding: 0.5rem;
+    box-sizing: border-box;
+    border-radius: 1rem;
+  }
+
+  #image_marker{
+    height: 3.2rem;
+    top: 0.5rem;
   }
 
   #english_heading{
@@ -300,52 +321,13 @@ html{
     transform: translateX(calc(-100% + 1rem)) rotateY(-0deg) scale(1);
   }
 
-  #tablet_mobile_slider{
-    display: block;
-    position: fixed;
-    top: 1rem;
-    left: 50%;
-    transform: translateX(-50%);
-    width: calc(100% - 2rem);
-    z-index: 100;
-  }
-
   #image_marker{
     position: fixed;
     left: 50%;
     transform: translateX(-50%);
     margin-top: 0.6rem;
-    height: 2rem;
   }
 
-  #slider {
-    -webkit-appearance: none;  /* Override default CSS styles */
-    appearance: none;
-    width: 100%; /* Full-width */
-    height: 2rem; /* Specified height */
-    background: rgba(255,255,255,0.7);
-    backdrop-filter: blur(5px); 
-    border: 0.1rem solid #fff;
-    outline: none;
-    border-radius: 4rem
-  }
-
-  #slider::-webkit-slider-thumb {
-    -webkit-appearance: none;
-    appearance: none;
-    width: 2rem;
-    height: 2rem;
-    border-radius: 50%;
-    background: #fff;
-    cursor: pointer;
-  }
-
-  #slider::-moz-range-thumb {
-    width: 2rem; /* Set a specific slider handle width */
-    height: 2rem; /* Slider handle height */
-    background: #fff;
-    cursor: pointer; /* Cursor on hover */
-  }
 }
 
 @media (max-width: 767px){
@@ -353,13 +335,15 @@ html{
     margin-top: 0rem;
   }
 
-  .page_heading{
-    font-size: 1rem;
-    top: 3rem;
+  #image_marker{
+    margin-top: 0.2rem;
+    height: 3rem;
   }
 
-  #image_marker{
-    height: 1rem;
+  .page_heading{
+    font-size: 1rem;
+    width: 3rem;
+    text-align: center;
   }
 
   #slider{
