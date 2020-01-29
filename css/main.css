@@ -445,7 +445,7 @@ html{
   }
 
   #text_wrapper{
-    z-index: 100;
+    z-index: 50;
   }
 
   #english, #spanish{
