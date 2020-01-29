@@ -82,6 +82,10 @@ function setMouse(event){
 }
 
 function englishVisible(){
+  document.querySelectorAll('.button').forEach(function(e){
+    e.classList.remove('selected')
+  });
+  document.getElementById('english_heading').classList.add('selected');
   document.body.classList.remove('between');
   document.body.classList.remove('sp');
   document.body.classList.add('en');
@@ -94,6 +98,10 @@ function imagesVisible(){
 }
 
 function spanishVisible(){
+  document.querySelectorAll('.button').forEach(function(e){
+    e.classList.remove('selected')
+  });
+  document.getElementById('spanish_heading').classList.add('selected');
   document.body.classList.remove('between');
   document.body.classList.remove('en');
   document.body.classList.add('sp');
