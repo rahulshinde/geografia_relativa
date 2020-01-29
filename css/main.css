@@ -419,6 +419,10 @@ html{
   .third{
     width: calc(100% - 2rem);
   }
+  
+  .image_container{
+    z-index: 5;
+  }
 
   .image_container img{
     width: calc(100% - 2rem);
@@ -440,14 +444,19 @@ html{
     position: static;
   }
 
+  #text_wrapper{
+    z-index: 100;
+  }
+
   #english, #spanish{
     margin-top: 0rem;
-    width: 60%;
+    width: 70%;
     margin-left: 0;
     margin-bottom: 1rem;
     display: none;
     opacity: 1;
     transform: translate3d(0,0,0) scale(1) !important;
+    z-index: 100;
   }
 
   .logo:not(.vcu){
