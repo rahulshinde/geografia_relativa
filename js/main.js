@@ -28,7 +28,10 @@ document.addEventListener("DOMContentLoaded", function(){
 
   width = window.innerWidth;
   height = window.innerHeight;
-  document.getElementById('slider').addEventListener('input', setSlider);
+
+  document.querySelectorAll('.async').forEach(function(e){
+    loadAsync(e);
+  });
 });
 
 function animateImages(){
@@ -81,6 +84,10 @@ function setMouse(event){
   }
 }
 
+function loadAsync(img){
+  img.setAttribute('src', img.dataset.src);
+}
+
 function englishVisible(){
   document.querySelectorAll('.button').forEach(function(e){
     e.classList.remove('selected')
@@ -105,16 +112,4 @@ function spanishVisible(){
   document.body.classList.remove('between');
   document.body.classList.remove('en');
   document.body.classList.add('sp');
-}
-
-function setSlider(event){
-  var value = event.target.value;
-  console.log(value);
-  if (value == 1){
-    spanishVisible();
-  } else if (value == 3){
-    englishVisible()
-  } else{
-    imagesVisible();
-  }
 }
