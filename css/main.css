@@ -345,11 +345,15 @@ html{
   }
 
   header{
-    position: fixed;
+    position: sticky;
+    position: -webkit-sticky;
+    display: block;
     top: 0;
     left: 0;
-    width: 100%;
-    height: 12rem;
+    padding-top: 1rem;
+    padding-bottom: 1rem;
+    margin-left: -1rem;
+    width: calc(100% + 2rem);
     backdrop-filter: blur(0.2rem);
     -webkit-backdrop-filter: blur(0.2rem);
     z-index: 99;
@@ -360,8 +364,10 @@ html{
   }
 
   .button.page_heading{
+    position: static;
+    display: inline-block;
     width: auto;
-    top: 9rem;
+    margin-top: 1.25rem;
   }
 
   .button.page_heading.selected{
@@ -370,8 +376,8 @@ html{
   }
 
   #english_heading{
-    right: auto;
-    left: 6rem;
+    margin-left: 1rem;
+    margin-right: 1rem;
   }
 
   .large{
@@ -434,7 +440,7 @@ html{
   }
 
   #english, #spanish{
-    margin-top: 13rem;
+    margin-top: 0rem;
     width: 60%;
     margin-left: 0;
     margin-bottom: 1rem;
@@ -449,9 +455,7 @@ html{
 
   #mobile_logo{
     display: block;
-    position: fixed;
-    top: 1rem;
-    left: 1rem;
+    margin-left: 1rem;
     width: calc(100% - 2rem);
   }
 
