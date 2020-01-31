@@ -504,8 +504,6 @@ html{
     bottom: 0;
     height: 100%;
     display: block;
-    perspective: 90000px;
-    -webkit-perspective: 90000px;
   }
 
   .background_images{
@@ -517,6 +515,7 @@ html{
     display: block;
     padding-top: 5rem;
     top: 0;
+    will-change: transform;
     animation: scroll linear 80s infinite;
     -webkit-animation: scroll linear 80s infinite;
   }
