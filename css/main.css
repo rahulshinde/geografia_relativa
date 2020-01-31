@@ -19,6 +19,16 @@ html,body,div,span,applet,object,iframe,h1,h2,h3,h4,h5,h6,p,blockquote,pre,a,abb
   100% {-webkit-transform: translateY(-100%);}
 }
 
+@keyframes mobilescroll{
+  0% {transform: translateY(100vh);}
+  100% {transform: translateY(-100%);}
+}
+
+@-webkit-keyframes mobilescroll{
+  0% {-webkit-transform: translateY(100vh);}
+  100% {-webkit-transform: translateY(-100%);}
+}
+
 html{
   background-color: #b9d3db;
 }
@@ -341,7 +351,6 @@ html{
     font-size: 18px;
   }
   body{
-    background-color: red;
     margin-top: 0rem;
     margin-bottom: 0;
   }
@@ -522,8 +531,8 @@ html{
     padding-top: 5rem;
     top: 0;
     will-change: transform;
-    animation: scroll linear 30s infinite;
-    -webkit-animation: scroll linear 30s infinite;
+    animation: mobilescroll linear 20s infinite;
+    -webkit-animation: mobilescroll linear 20s infinite;
   }
 
   .between .image_inner_wrapper{
