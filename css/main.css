@@ -351,7 +351,7 @@ html{
     font-size: 18px;
   }
   body{
-    background-color: blue;
+    background-color: green;
     margin-top: 0rem;
     margin-bottom: 0;
   }
@@ -531,9 +531,13 @@ html{
     display: block;
     padding-top: 5rem;
     top: 0;
-    will-change: transform;
-    animation: mobilescroll linear 20s infinite;
-    -webkit-animation: mobilescroll linear 20s infinite;
+    animation: none;
+    -webkit-animation: none;
+  }
+
+  .mobile_animating .image_inner_wrapper{
+    animation: mobilescroll linear 15s infinite;
+    -webkit-animation: mobilescroll linear 15s infinite;
   }
 
   .between .image_inner_wrapper{

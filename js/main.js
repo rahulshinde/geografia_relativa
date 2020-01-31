@@ -28,6 +28,9 @@ document.addEventListener("DOMContentLoaded", function(){
     hideSome(e);
   });
 
+  setTimeout(function(){
+    document.classList.add('mobile_animating');
+  }, 500);
   // animateImages();
 });
 
