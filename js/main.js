@@ -20,9 +20,9 @@ document.addEventListener("DOMContentLoaded", function(){
   height = window.innerHeight;
   // resizeHandler();
 
-  document.querySelectorAll('.async').forEach(function(e){
-    loadAsync(e);
-  });
+  // document.querySelectorAll('.async').forEach(function(e){
+  //   loadAsync(e);
+  // });
 
   document.querySelectorAll('.foreground_images .async').forEach(function(e){
     hideSome(e);
