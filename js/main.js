@@ -29,7 +29,7 @@ document.addEventListener("DOMContentLoaded", function(){
   });
 
   setTimeout(function(){
-    document.classList.add('mobile_animating');
+    document.body.classList.add('mobile_animating');
   }, 500);
   // animateImages();
 });

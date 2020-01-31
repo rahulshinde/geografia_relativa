@@ -351,7 +351,6 @@ html{
     font-size: 18px;
   }
   body{
-    background-color: green;
     margin-top: 0rem;
     margin-bottom: 0;
   }
@@ -533,6 +532,8 @@ html{
     top: 0;
     animation: none;
     -webkit-animation: none;
+    transform: translateY(-100%);
+    -webkit-transform: translateY(-100%);
   }
 
   .mobile_animating .image_inner_wrapper{
