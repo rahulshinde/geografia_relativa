@@ -30,7 +30,7 @@ document.addEventListener("DOMContentLoaded", function(){
 
   setTimeout(function(){
     document.body.classList.add('mobile_animating');
-  }, 500);
+  }, 1000);
   // animateImages();
 });
 
