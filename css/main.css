@@ -341,6 +341,7 @@ html{
     font-size: 18px;
   }
   body{
+    background-color: red;
     margin-top: 0rem;
     margin-bottom: 0;
   }
