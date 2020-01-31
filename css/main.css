@@ -341,6 +341,7 @@ html{
     font-size: 18px;
   }
   body{
+    background-color: red;
     margin-top: 0rem;
     margin-bottom: 0;
   }
@@ -424,7 +425,12 @@ html{
     z-index: 5;
   }
 
+  .image_container img.mobile_image{
+    display: block;
+  }
+
   .image_container img{
+    display: none;
     width: calc(100% - 2rem);
     margin-top: 0;
     opacity: 1;
@@ -516,14 +522,8 @@ html{
     padding-top: 5rem;
     top: 0;
     will-change: transform;
-    -webkit-perspective: 1000;
-    -moz-perspective: 1000;
-    -ms-perspective: 1000;
-    perspective: 1000;
-    backface-visibility: hidden;
-    -webkit-backface-visibility: hidden;
-    animation: scroll linear 80s infinite;
-    -webkit-animation: scroll linear 80s infinite;
+    animation: scroll linear 30s infinite;
+    -webkit-animation: scroll linear 30s infinite;
   }
 
   .between .image_inner_wrapper{

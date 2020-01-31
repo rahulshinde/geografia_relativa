@@ -20,8 +20,12 @@ document.addEventListener("DOMContentLoaded", function(){
   height = window.innerHeight;
   // resizeHandler();
 
-  document.querySelectorAll('.async').forEach(function(e){
-    loadAsync(e);
+  document.querySelectorAll('.background_images .async').forEach(function(e){
+    loadAsync(e, false);
+  });
+
+  document.querySelectorAll('.foreground_images .async').forEach(function(e){
+    loadAsync(e, true);
   });
 
   // animateImages();
@@ -81,8 +85,18 @@ function setMouse(event){
   }
 }
 
-function loadAsync(img){
-  img.setAttribute('src', img.dataset.src);
+function loadAsync(img, mobile){
+  if (mobile){
+    img.setAttribute('src', img.dataset.src);  
+    if (current < 10){
+      if (Math.random() < 0.5){
+        current = current + 1;
+        img.classList.add('mobile_image')
+      }
+    }
+  }else{
+    img.setAttribute('src', img.dataset.src);  
+  }
 }
 
 function englishVisible(){
